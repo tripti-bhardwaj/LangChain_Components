@@ -7,7 +7,6 @@ load_dotenv()
 model = ChatOpenAI()
 
 class Review(BaseModel):
-    I
     key_themes: list[str] = Field(description = "Write down all the key themes discussed in the review in a list")
     summary: Annotated[str, "A brief summary of the review."]
     sentiment: Annotated[Literal["pos", "neg"], "Return sentiment of the review either negative or positive."]
